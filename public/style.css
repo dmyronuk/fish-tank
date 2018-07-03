@@ -1,0 +1,32 @@
+body{
+  background-image:url('/images/tank.jpg');
+  background-size:cover;
+}
+
+@keyframes rotate{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+@keyframes explode{
+  0%{height:0; opacity:1}
+  50%{opacity:0.8}
+  100%{height:200; opacity:0}
+}
+
+.spinning{
+  animation: rotate 2s infinite ease-out;
+}
+
+.lava{
+  height:0px;
+  width:200px;
+  border-radius:100%;
+  background:orange;
+  position:absolute;
+  z-index:1000;
+}
+
+.exploding{
+  animation: explode 1s ease-out;
+}

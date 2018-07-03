@@ -2,6 +2,7 @@ class GoFish extends Fish {
 
   constructor(options) {
     super(options);
+    this.imageUri = '/images/face.png';
     this.surgeSecondsLeft = 0;
     this.maxSurge = 1.0;
     this.surgMult = 3.0;
@@ -19,6 +20,7 @@ class GoFish extends Fish {
 
 
   onClick(event) {
+    console.log(this)
     this.surgeSecondsLeft = this.maxSurge;
   }
 }
